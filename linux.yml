@@ -1,0 +1,35 @@
+---
+- name: case1
+  hosts: case1
+  tasks:
+  - name: install_mc
+    dnf: 
+      name: "mc"
+
+
+
+
+
+
+
+- name: web1_nginx
+  hosts: web1
+  tasks:
+  - name: install_nginx
+    dnf:
+      name: "nginx"
+
+
+
+
+
+
+- name: DB_docker_postgreSQL
+  hosts: db
+  tasks:
+  - name: install_docker
+    dnf:
+      name: "docker"
+  - name: install_postgreSQL
+    dnf:
+      name: "postgresql"
